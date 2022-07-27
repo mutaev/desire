@@ -56,16 +56,6 @@ function clean() {
 //     }); другой способ подключение 
 
 
-function pug() {
-    return gulp.src(paths.pug.src)
-    .pipe(gulppug())
-    .pipe(size({
-        showFiles: true
-    }))
-    .pipe(gulp.dest(paths.pug.dest))
-    .pipe(browsersync.stream())
-}
-
 // минификация html
 function html() {
     return gulp.src(paths.html.src)
@@ -153,11 +143,10 @@ function watch(){
 }
 
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts), watch)
+const build = gulp.series(clean, html, gulp.parallel(styles, scripts), watch)
 
 exports.clean = clean
 exports.img = img
-exports.pug = pug
 exports.html = html
 exports.styles = styles
 exports.scripts =scripts
