@@ -95,7 +95,7 @@ function styles(){
 function scripts(){
     return gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
-    .pipe(coffee({bare: true}))
+    // .pipe(coffee({bare: true}))
     // .pipe(ts({
     //     noImplicitAny: true,
     //     outFile: 'main.min.js'
