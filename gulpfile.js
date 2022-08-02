@@ -35,7 +35,7 @@ const paths = {
         dest: 'dist/css/'
     },
     scripts: {
-        src: ['src/scripts/**/*.coffee', 'src/scripts/**/*.ts', 'src/scripts/**/*.js'],
+        src: ['src/scripts/**/*.coffee', 'src/scripts/**/*.ts', 'src/scripts/**/*.js', 'node_modules/slick-carousel/slick/slick.js'],
         dest: 'dist/js/'
     },
     images: {
@@ -69,7 +69,7 @@ function html() {
 
 // задача для обрабоки стилей
 function styles(){
-    return gulp.src(paths.styles.src)
+    return gulp.src(paths.styles.src )
         .pipe(sourcemaps.init())
         // .pipe(less())
         .pipe(sass().on('error', sass.logError))
