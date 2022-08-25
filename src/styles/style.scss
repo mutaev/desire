@@ -139,24 +139,6 @@
     margin-bottom: 16px;
     max-width: 476px;
   }
-  &__info-email {
-    font-weight: 600;
-    font-size: 14px;
-    color: $title;
-    margin-bottom: 22px;
-    padding-left: 30px;
-    display: inline-block;
-    position: relative;
-    &::before{
-      content: '';
-      background-image: url(../img/envelope.svg);
-      position: absolute;
-      left: 0;
-      width: 16px;
-      height: 12px;
-      top: 8px;
-    }
-  }
   &__form {
     display: flex;
   }
@@ -260,6 +242,8 @@
 .bredcrumbs {
   background-color:  rgba(#DFDFDF, .5);
   padding: 13px 14px;
+  position: relative;
+  z-index: 999;
   &__list {
     display: flex;
   }
@@ -561,6 +545,15 @@
     max-height: 1150px;
     height: 100%;
   }
+  &.gallery-page{
+    .gallery__item img{
+      max-height: 1165px;
+    }
+    .gallery__item:nth-child(8){
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
 }
 //gallery
 
@@ -755,3 +748,10 @@
   }
 }
 // partners
+
+
+//map
+.map{
+  margin-top: -53px;
+  margin-bottom: 50px;
+}
