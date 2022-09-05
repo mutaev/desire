@@ -99,7 +99,7 @@ function scripts(){
     // .pipe(ts({
     //     noImplicitAny: true,
     //     outFile: 'main.min.js'
-    // })) если нужен тайпскрипт, то нужно разкоментировать а кофе закоментировать  
+    // }))  
     .pipe(babel({
         presets: ['@babel/env']
     }))
